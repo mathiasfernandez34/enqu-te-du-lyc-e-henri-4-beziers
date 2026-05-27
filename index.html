@@ -84,7 +84,6 @@
             transform: scale(1.02) translateY(-2px);
         }
 
-        /* Stats rapides sous l'affiche */
         .quick-stats {
             width: 100%;
             max-width: 260px;
@@ -104,7 +103,7 @@
         .stat-number {
             font-size: 1.25rem;
             font-weight: 700;
-            color: #b91c1c; /* Rouge pro pour interpeller */
+            color: #b91c1c; 
         }
 
         .stat-label {
@@ -113,7 +112,7 @@
             margin-top: 2px;
         }
 
-        /* Section Droite : Contenu étendu */
+        /* Section Droite : Contenu */
         .content-section {
             padding: 50px;
             display: flex;
@@ -151,7 +150,6 @@
             margin-bottom: 24px;
         }
 
-        /* Liste d'objectifs */
         .goals-list {
             margin-bottom: 24px;
             list-style: none;
@@ -175,7 +173,6 @@
             font-weight: bold;
         }
 
-        /* Alerte Urgence */
         .emergency-banner {
             background-color: var(--emergency-bg);
             border: 1px solid var(--emergency-border);
@@ -250,7 +247,6 @@
             cursor: pointer;
         }
 
-        /* Footer */
         footer {
             margin-top: 30px;
             font-size: 0.75rem;
@@ -278,7 +274,6 @@
 
     <div class="container">
         
-        <!-- GAUCHE : Visuel + Statistiques d'impact -->
         <div class="preview-section">
             <div class="poster-wrapper">
                 <img src="affiche.jpg" alt="Campagne Affiche" class="poster-preview">
@@ -296,20 +291,17 @@
             </div>
         </div>
 
-        <!-- DROITE : Textes, Objectifs, Urgences et Menu -->
         <div class="content-section">
             <div class="badge">Sensibilisation Citoyenne</div>
             <h1>Agir contre les comportements sexistes</h1>
             <p class="description">Cette campagne vise à briser les stéréotypes, informer sur les droits fondamentaux et mettre à disposition des outils concrets pour identifier et signaler les agissements sexistes au quotidien.</p>
             
-            <!-- Liste d'objectifs pour structurer la page -->
             <ul class="goals-list">
                 <li><span class="bullet-icon">✓</span> <strong>Comprendre :</strong> Identifier les limites et définir les infractions.</li>
                 <li><span class="bullet-icon">✓</span> <strong>Soutenir :</strong> Orienter efficacement les victimes vers les structures adaptées.</li>
                 <li><span class="bullet-icon">✓</span> <strong>Alerter :</strong> Connaître les dispositifs de signalement en ligne.</li>
             </ul>
 
-            <!-- Bannière d'urgence (Sécurité & Confiance) -->
             <div class="emergency-banner">
                 <span class="emergency-phone">3919</span>
                 <div>
@@ -318,7 +310,6 @@
                 </div>
             </div>
             
-            <!-- Bouton Principal -->
             <a href="affiche.jpg" target="_blank" class="btn">
                 <span>Consulter l'affiche complète</span>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -327,21 +318,19 @@
                 </svg>
             </a>
 
-            <!-- Menu Déroulant Institutionnel -->
             <div class="dropdown-container">
                 <label class="dropdown-label">Ressources et Accompagnement Officiel</label>
                 <select class="custom-select" onchange="navigateToSite(this)">
                     <option value="" disabled selected>Sélectionner une plateforme de l'État...</option>
                     <option value="https://www.arretonslesviolences.gouv.fr/">Arrêtons les Violences (Signalement direct)</option>
-                    <option value="https://www.egalite-femmes-hommes.gouv.fr/">Ministère chargé de l'Égalité</option>
-                    <option value="https://www.service-public.fr/particuliers/vosdroits/F34303">Vos droits face au harcèlement (Service-Public)</option>
+                    <option value="https://www.service-public.fr/particuliers/vosdroits/F1043">Fiche légale : Harcèlement sexuel ou sexiste (Service-Public)</option>
+                    <option value="https://www.service-public.fr/particuliers/vosdroits/R50241">Plateforme de signalement en ligne aux forces de l'ordre</option>
                 </select>
             </div>
         </div>
 
     </div>
 
-    <!-- Pied de page -->
     <footer>
         <p>Plateforme d'information locale — En partenariat avec les ressources d'intérêt général de l'État.</p>
     </footer>
