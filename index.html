@@ -6,31 +6,16 @@
     <title>Accueil | Information & Ressources</title>
     <style>
         :root {
-            /* Fond moins noir : passage à un gris anthracite doux */
-            --bg-color: #18181b; 
-            --card-bg: #202024;
-            --border-color: #2e2e33;
-            --text-main: #ffffff;
-            --text-muted: #a1a1aa;
-            --accent: #ffffff;
-            --accent-hover: #e4e4e7;
-            --btn-text: #000000;
-            --select-bg: #2e2e33;
-        }
-
-        /* Mode clair automatique */
-        @media (prefers-color-scheme: light) {
-            :root {
-                --bg-color: #f4f4f5;
-                --card-bg: #ffffff;
-                --border-color: #e4e4e7;
-                --text-main: #09090b;
-                --text-muted: #71717a;
-                --accent: #09090b;
-                --accent-hover: #27272a;
-                --btn-text: #ffffff;
-                --select-bg: #f4f4f5;
-            }
+            /* Palette de couleurs claires et lumineuses */
+            --bg-color: #f4f4f7;        /* Gris très clair et doux pour le fond */
+            --card-bg: #ffffff;         /* Blanc pur pour détacher la carte */
+            --border-color: #e4e4e7;     /* Bordures fines gris clair */
+            --text-main: #18181b;       /* Texte principal anthracite foncé (très lisible) */
+            --text-muted: #61616a;      /* Texte secondaire gris intermédiaire */
+            --accent: #18181b;          /* Couleur des boutons principaux */
+            --accent-hover: #2f2f35;    /* Survol du bouton */
+            --btn-text: #ffffff;        /* Texte dans le bouton */
+            --select-bg: #f4f4f7;       /* Fond du menu déroulant */
         }
 
         * {
@@ -49,7 +34,6 @@
             align-items: center;
             -webkit-font-smoothing: antialiased;
             padding: 40px 20px;
-            transition: background-color 0.3s ease;
         }
 
         .container {
@@ -61,12 +45,12 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.02);
         }
 
         /* Section Visuel (Gauche) */
         .preview-section {
-            background: linear-gradient(135deg, #27272a, #18181b);
+            background: linear-gradient(135deg, #fbfbfc, #f4f4f7);
             position: relative;
             display: flex;
             justify-content: center;
@@ -81,7 +65,7 @@
             max-width: 280px;
             aspect-ratio: 3 / 4;
             border-radius: 12px;
-            box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
             transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
@@ -107,7 +91,7 @@
         .badge {
             display: inline-block;
             align-self: flex-start;
-            background-color: var(--border-color);
+            background-color: #f4f4f7;
             color: var(--text-main);
             font-size: 0.75rem;
             font-weight: 600;
@@ -116,6 +100,7 @@
             padding: 6px 12px;
             border-radius: 100px;
             margin-bottom: 20px;
+            border: 1px solid var(--border-color);
         }
 
         h1 {
@@ -245,14 +230,12 @@
 
     </div>
 
-    <!-- Script JavaScript pour gérer la redirection immédiate au choix dans le menu -->
+    <!-- Script JavaScript pour la redirection externe -->
     <script>
         function navigateToSite(selectElement) {
             const url = selectElement.value;
             if (url) {
-                // Ouvre le site officiel dans un nouvel onglet pour ne pas perdre la page actuelle
                 window.open(url, '_blank');
-                // Réinitialise le menu sur le message par défaut
                 selectElement.selectedIndex = 0;
             }
         }
